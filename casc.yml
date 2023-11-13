@@ -1,0 +1,49 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+       - id: ${JENKINS_ADMIN_ID}
+         password: ${JENKINS_ADMIN_PASSWORD}
+
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "USER:Overall/Administer:cddeploy"
+        - "GROUP:Overall/Read:authenticated"
+
+  remotingSecurity:
+    enabled: true
+jobs:
+  - file: /var/jenkins_home/job_dsl/job.groovy
+
+  remotingSecurity:
+    enabled: true
+    
+security:
+  queueItemAuthenticator:
+    authenticators:
+      - global:
+          strategy: triggeringUsersAuthorizationStrategy
+
+unclassified:
+  location:
+    url: http://localhost:8080/
+
+tool:
+  git:
+    installations:
+      - home: git
+        name: default
+credentials: # (5)
+  system:
+    domainCredentials:
+      - domain :
+          name: "github.com"
+          description: "GitHub"
+        credentials:
+          - usernamePassword:
+              scope: SYSTEM
+              id: github-id
+              username: sushant1305
+              password: Sushant16#
