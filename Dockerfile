@@ -5,3 +5,6 @@ COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN jenkins-plugin-cli --plugins -f /usr/share/jenkins/ref/plugins.txt
 COPY casc.yml /var/jenkins_home/casc.yml
 COPY job.groovy /var/jenkins_home/job_dsl/job.groovy
+USER root
+RUN groupadd -g docker  docker && usermod -aG docker jenkins
+USER jenkins
