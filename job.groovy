@@ -4,11 +4,12 @@ pipelineJob('courier_management') {
       scm {
         git {
           remote {
-            url('https://github.com/sushant1305/courier_management.git')
+            url('git@github.com:sushant1305/courier_management.git')
           }
-          branch('*/feature/docker_img')
+          branch('feature/docker_img')
         }
       }
+      scriptPath("Jenkinsfile")
       lightweight()
     }
   }
