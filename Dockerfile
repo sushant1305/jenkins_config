@@ -7,4 +7,5 @@ COPY casc.yml /var/jenkins_home/casc.yml
 COPY job.groovy /var/jenkins_home/job_dsl/job.groovy
 USER root
 RUN curl -sSL https://get.docker.com/ | sh
+RUN groupadd docker && gpasswd -a jenkins docker
 USER jenkins
