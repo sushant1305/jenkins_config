@@ -44,3 +44,11 @@ credentials: # (5)
               id: github-id
               username: sushant1305
               password: Sushant16#
+    
+      - credentials:
+        - usernamepassword:
+            scope: GLOBAL
+            id: sonar-credentials
+            username: admin
+            password: admin
+            description: "default credentials."
