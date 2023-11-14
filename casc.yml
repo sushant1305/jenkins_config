@@ -16,9 +16,6 @@ jenkins:
     enabled: true
 jobs:
   - file: /var/jenkins_home/job_dsl/job.groovy
-
-  remotingSecurity:
-    enabled: true
     
 security:
   queueItemAuthenticator:
