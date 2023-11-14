@@ -26,6 +26,14 @@ security:
 unclassified:
   location:
     url: http://192.168.0.130:8080/
+  SonarGlobalConfiguration:
+    installations:
+      - name: Sonar
+        serverAuthenticationToken: "aK7eiyEPdK18QKfQKHXJycDY2GFz4vFh64NXQWU8InI="
+        serverUrl: http://192.168.0.132:9000/
+        triggers:
+          skipScmCause: false
+          skipUpstreamCause: false
 
 tool:
   git:
