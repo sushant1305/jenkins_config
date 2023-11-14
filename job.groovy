@@ -1,4 +1,7 @@
 pipelineJob('courier_management') {
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+  }
   definition {
     cpsScm {
       scm {
