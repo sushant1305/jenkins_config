@@ -32,10 +32,6 @@ tool:
     installations:
       - home: git
         name: default
-  docker:
-    installations:
-      - home: docker
-        name: default
 credentials: # (5)
   system:
     domainCredentials:
