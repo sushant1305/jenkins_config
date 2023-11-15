@@ -57,6 +57,6 @@ credentials: # (5)
         - usernamepassword:
             scope: GLOBAL
             id: sonar-credentials
-            username: admin
-            password: Admin123#
+            username: jenkins
+            password: jenkins
             description: "default credentials."
