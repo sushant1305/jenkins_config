@@ -14,3 +14,19 @@ pipelineJob('courier_management') {
     }
   }
 }
+pipelineJob('courier_management') {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url('git@github.com:sushant1305/cd.git')
+          }
+          branch('feature/dev')
+        }
+      }
+      scriptPath("Jenkinsfile")
+      lightweight()
+    }
+  }
+}
