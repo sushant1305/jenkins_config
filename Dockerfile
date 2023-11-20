@@ -1,5 +1,5 @@
 FROM jenkins/jenkins:lts
-RUN apt-get update && apt-get install -y wget --no-install-recommends && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get -y install --no-install-recommends wget && rm -rf /var/lib/apt/lists/*
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 ENV CASC_JENKINS_CONFIG /var/jenkins_home/casc.yml
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
