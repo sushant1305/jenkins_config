@@ -5,6 +5,8 @@ RUN wget https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6
 RUN mkdir /var/java-20.0.1
 RUN tar -C /var/java-20.0.1 -zxvf openjdk-20.0.1_linux-x64_bin.tar.gz
 ENV JAVA_HOME /var/java-20.0.1/jdk-20.0.1/bin/java
+RUN export JAVA_HOME
+RUN echo $JAVA_HOME
 RUN curl -sSL https://get.docker.com/ | sh
 RUN usermod -aG docker jenkins
 RUN rm -rf /var/lib/apt/lists/* openjdk-20.0.1_linux-x64_bin.tar.gz
