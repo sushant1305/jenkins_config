@@ -40,6 +40,10 @@ tool:
     installations:
       - home: git
         name: default
+  jdk:
+    installations:
+      - name: jdk20.0.1
+        home: "/var/java-20.0.1/jdk-20.0.1/"
 credentials: # (5)
   system:
     domainCredentials:
