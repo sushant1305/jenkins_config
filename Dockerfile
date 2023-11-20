@@ -1,4 +1,5 @@
 FROM jenkins/jenkins:lts
+USER root
 RUN apt-get update && apt-get -y install --no-install-recommends wget && rm -rf /var/lib/apt/lists/*
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 ENV CASC_JENKINS_CONFIG /var/jenkins_home/casc.yml
