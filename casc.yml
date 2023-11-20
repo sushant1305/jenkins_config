@@ -62,7 +62,7 @@ tool:
   jdk:
     installations:
       - name: jdk20.0.1
-        home: "/var/java-20.0.1/jdk-20.0.1/"
+        home: "/usr/java/jdk-20.0.1/"
 credentials: # (5)
   system:
     domainCredentials:
