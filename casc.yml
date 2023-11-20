@@ -1,4 +1,23 @@
 jenkins:
+  nodes:
+    - permanent:
+        labelString: "Controller_Agent2"
+        mode: NORMAL
+        name: "utility-node-2"
+        numExecutors: 2
+        remoteFS: "/home/cddeploy/jenkins_2/"
+        launcher:
+          SSHLauncher:
+            host: "192.168.0.130"
+            port: 22
+            credentialsId: agent
+            launchTimeoutSeconds: 60
+            maxNumRetries: 3
+            retryWaitTime: 30
+            sshHostKeyVerificationStrategy:
+              manuallyTrustedKeyVerificationStrategy:
+                requireInitialManualTrust: false
+
   securityRealm:
     local:
       allowsSignup: false
@@ -56,3 +75,9 @@ credentials: # (5)
               id: github-id
               username: sushant1305
               password: Sushant16#
+          - usernamePassword:
+              scope: GLOBAL
+              id: "agent"
+              username: "cddeploy"
+              password: "admin123"
+              description: "For connecting to agents"
