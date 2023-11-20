@@ -14,7 +14,7 @@ RUN rm -rf /var/lib/apt/lists/* openjdk-20.0.1_linux-x64_bin.tar.gz
 USER jenkins
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 ENV CASC_JENKINS_CONFIG /var/jenkins_home/casc.yml
-COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+COPY plugins.txt /var/jenkins_home/plugins.txt
 COPY casc.yml /var/jenkins_home/casc.yml
 COPY job.groovy /var/jenkins_home/job_dsl/job.groovy
 RUN jenkins-plugin-cli --plugins -f /usr/share/jenkins/ref/plugins.txt
