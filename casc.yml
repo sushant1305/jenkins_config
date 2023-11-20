@@ -3,7 +3,7 @@ jenkins:
     - permanent:
         labelString: "Controller_Agent2"
         mode: NORMAL
-        name: "utility-node-2"
+        name: "controller_node"
         numExecutors: 2
         remoteFS: "/home/cddeploy/jenkins_2/"
         launcher:
