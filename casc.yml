@@ -1,7 +1,7 @@
 jenkins:
   nodes:
     - permanent:
-        labelString: "Controller_Agent2"
+        labelString: "controlleragent"
         mode: NORMAL
         name: "controller_node"
         numExecutors: 2
