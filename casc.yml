@@ -4,8 +4,8 @@ jenkins:
         labelString: "controlleragent"
         mode: NORMAL
         name: "controller_node"
-        numExecutors: 2
-        remoteFS: "/home/cddeploy/jenkins_2/"
+        numExecutors: 3
+        remoteFS: "/home/cddeploy/jenkins/"
         launcher:
           SSHLauncher:
             host: "192.168.0.130"
