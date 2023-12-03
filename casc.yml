@@ -75,9 +75,6 @@ credentials:
               id: github-id
               username: sushant1305
               password: Sushant16#
-      - domain :
-          name: "jenkins_agent"
-          description: "agent"
           - usernamePassword:
               scope: GLOBAL
               id: "agent"
