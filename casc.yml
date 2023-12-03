@@ -66,10 +66,7 @@ tool:
 credentials:
   system:
     domainCredentials:
-      - domain :
-          name: "github.com"
-          description: "GitHub"
-        credentials:
+      - credentials:
           - usernamePassword:
               scope: SYSTEM
               id: github-id
