@@ -63,7 +63,7 @@ tool:
     installations:
       - name: jdk20.0.1
         home: "/usr/java/jdk-20.0.1/"
-credentials: # (5)
+credentials:
   system:
     domainCredentials:
       - domain :
@@ -75,6 +75,9 @@ credentials: # (5)
               id: github-id
               username: sushant1305
               password: Sushant16#
+      - domain :
+          name: "jenkins_agent"
+          description: "agent"
           - usernamePassword:
               scope: GLOBAL
               id: "agent"
